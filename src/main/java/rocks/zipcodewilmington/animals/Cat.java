@@ -10,7 +10,12 @@ public class Cat extends Mammal {
         super(name, birthDate, id);
     }
 
+    public Cat (){
+        super("fluffy",new Date(100), 1);
+    }
+
     public String speak() {
         return "meow!";
     }
+
 }
