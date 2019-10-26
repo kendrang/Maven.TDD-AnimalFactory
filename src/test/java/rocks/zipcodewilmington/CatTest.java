@@ -89,10 +89,12 @@ public class CatTest {
     }
 
     @Test
-    public void eat() {
-        Cat cat = new Cat ();
-        Food actual = cat.eat();
-
+    public void eatTest() {
+        Cat cat = new Cat();
+        cat.eat(new Food());
+       Integer actual =  cat.getNumberOfMealsEaten();
+       Integer expected = 1;
+       Assert.assertEquals(expected,actual);
 
     }
 
