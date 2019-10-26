@@ -11,7 +11,7 @@ public class Cat extends Mammal {
     }
 
     public Cat (){
-        super("fluffy",new Date(100), 1);
+        super("fluffy",new Date(), 1);
     }
 
     public String speak() {

@@ -11,7 +11,7 @@ public class Dog extends Mammal {
     }
 
     public Dog () {
-        super("Benji", 10, 1);
+        super("Benji", new Date(), 1);
     }
 
     public String speak() {
