@@ -28,7 +28,7 @@ public class CatHouseTest {
     @Test
     public void testRemove () {
         CatHouse catHouse1 = new CatHouse();
-        Cat cat = new Cat ("Donut", new Date(10), 3);
+        Cat cat = new Cat ("Donut", new Date(10), 7);
         catHouse1.add(cat);
         catHouse1.remove(3);
         Cat actual = catHouse1.getCatById(3);
