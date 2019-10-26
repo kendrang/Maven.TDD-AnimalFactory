@@ -28,14 +28,38 @@ public class CatHouseTest {
     @Test
     public void testRemove () {
         CatHouse catHouse1 = new CatHouse();
-        Cat cat = new Cat ();
+        Cat cat = new Cat ("Donut", new Date(10), 3);
         catHouse1.add(cat);
-
+        catHouse1.remove(3);
+        Cat actual = catHouse1.getCatById(3);
+        Assert.assertEquals(null,actual);
 
 
     }
 
     // TODO - Create tests for `void remove(Cat cat)`
-    // TODO - Create tests for `Cat getCatById(Integer id)`
+
+    @Test
+    public void testRemoveCatbyCat () {
+        CatHouse catHouse1 = new CatHouse();
+        Cat bby = new Cat ("Cheeseburger", new Date(10), 3);
+        catHouse1.add(bby);
+        catHouse1.remove(bby);
+        Cat actual = catHouse1.getCatById(3);
+        Assert.assertEquals(null,actual);
+
+    }
+
     // TODO - Create tests for `Integer getNumberOfCats()`
+
+    @Test
+    public void testNumberofCat (){
+        CatHouse catHouse2 = new CatHouse();
+        Cat hahacat = new Cat("BurgerKing", new Date(10), 5);
+        catHouse2.add(hahacat);
+        Integer expected = 1;
+        Integer actual = catHouse2.getNumberOfCats();
+        Assert.assertEquals(expected,actual);
+    }
+
 }
